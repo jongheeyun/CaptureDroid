@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         // Update TextView with IP address
         val ipAddress = getIPAddress()
-        findViewById<TextView>(R.id.text_message).text = "$ipAddress:3333"
+        val lastOctet = ipAddress.split(".").lastOrNull() ?: "Unknown"
+        findViewById<TextView>(R.id.text_message).text = "$lastOctet:3333"
 
         // Start web server
         startWebServer()
