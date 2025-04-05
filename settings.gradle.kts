@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CaptureDroid"
+rootProject.name = "IPTIME"
 include(":app")
